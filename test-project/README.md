@@ -1,21 +1,18 @@
-# Test
+# test_project
 
-**TODO: Add description**
 
-## Installation
+A Gleam program
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `test` to your list of dependencies in `mix.exs`:
 
-```elixir
-def deps do
-  [
-    {:test, "~> 0.1.0"}
-  ]
-end
+## Quick start
+
+```sh
+# Build the project
+rebar3 compile
+
+# Run the eunit tests
+rebar3 eunit
+
+# Run the Erlang REPL
+rebar3 shell
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/test](https://hexdocs.pm/test).
-

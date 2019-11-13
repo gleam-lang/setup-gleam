@@ -1,12 +1,12 @@
-# setup-elixir
+# setup-gleam
 
-[![](https://github.com/actions/setup-elixir/workflows/Test/badge.svg)](https://github.com/actions/setup-elixir/actions)
-[![](https://github.com/actions/setup-elixir/workflows/Licensed/badge.svg)](https://github.com/actions/setup-elixir/actions)
+[![](https://github.com/gleam-lang/setup-gleam/workflows/Test/badge.svg)](https://github.com/gleam-lang/setup-gleam/actions)
+[![](https://github.com/gleam-lang/setup-gleam/workflows/Licensed/badge.svg)](https://github.com/gleam-lang/setup-gleam/actions)
 
-This actions sets up an Elixir environment for use in Actions by:
+This actions sets up a Gleam environment for use in Actions by:
 
 - Installing OTP
-- Installing Elixir
+- Installing Gleam
 
 **Note** Currently, this action currently only supports Actions' `ubuntu-` runtimes.
 
@@ -30,12 +30,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1.0.0
-      - uses: actions/setup-elixir@v1.0.0
+      - uses: actions/setup-gleam@v1.0.0
         with:
           otp-version: 22.x
-          elixir-version: 1.9.x
-      - run: mix deps.get
-      - run: mix test
+          gleam-version: 0.4.x
+      - run: rebar3 install_deps
+      - run: rebar3 eunit
 ```
 
 ### Matrix example
@@ -46,22 +46,22 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: OTP ${{matrix.otp}} / Elixir ${{matrix.elixir}}
+    name: OTP ${{matrix.otp}} / Gleam ${{matrix.gleam}}
     strategy:
       matrix:
         otp: [20.x, 21.x, 22.x]
-        elixir: [1.8.x, 1.9.x]
+        gleam: [0.4.1]
     steps:
       - uses: actions/checkout@v1.0.0
-      - uses: actions/setup-elixir@v1.0.0
+      - uses: actions/setup-gleam@v1.0.0
         with:
           otp-version: ${{matrix.otp}}
-          elixir-version: ${{matrix.elixir}}
-      - run: mix deps.get
-      - run: mix test
+          gleam-version: ${{matrix.gleam}}
+      - run: rebar3 install_deps
+      - run: rebar3 eunit
 ```
 
-### Phoenix example
+### Postgresql example
 
 ```yaml
 on: push
@@ -82,12 +82,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1.0.0
-      - uses: actions/setup-elixir@v1.0.0
+      - uses: actions/setup-gleam@v1.0.0
         with:
           otp-version: 22.x
-          elixir-version: 1.9.x
-      - run: mix deps.get
-      - run: mix test
+          gleam-version: 0.4.x
+      - run: rebar3 install_deps
+      - run: rebar3 eunit
 ```
 
 ## License
