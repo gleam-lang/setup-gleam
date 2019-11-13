@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1.0.0
-      - uses: actions/setup-gleam@v1.0.0
+      - uses: gleam-lang/setup-gleam@v1.0.0
         with:
           otp-version: 22.x
           gleam-version: 0.4.x
@@ -53,7 +53,7 @@ jobs:
         gleam: [0.4.1]
     steps:
       - uses: actions/checkout@v1.0.0
-      - uses: actions/setup-gleam@v1.0.0
+      - uses: gleam-lang/setup-gleam@v1.0.0
         with:
           otp-version: ${{matrix.otp}}
           gleam-version: ${{matrix.gleam}}
@@ -82,7 +82,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1.0.0
-      - uses: actions/setup-gleam@v1.0.0
+      - uses: gleam-lang/setup-gleam@v1.0.0
         with:
           otp-version: 22.x
           gleam-version: 0.4.x
