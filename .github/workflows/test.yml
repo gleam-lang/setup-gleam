@@ -8,25 +8,25 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: OTP ${{matrix.pair.otp-version}} / Elixir ${{matrix.pair.elixir-version}}
+    name: OTP ${{matrix.pair.otp-version}} / Gleam ${{matrix.pair.gleam-version}}
     strategy:
       matrix:
         pair:
           # Full Versions
           - otp-version: 22.0
-            elixir-version: 1.9.1
+            gleam-version: 0.4.1
           # Semver ranges
           - otp-version: 21.x
-            elixir-version: <1.9.1
+            gleam-version: <0.4.1
     steps:
       - uses: actions/checkout@v1.0.0
-      - name: Use actions/setup-elixir
+      - name: Use actions/setup-gleam
         uses: ./
         with:
           otp-version: ${{matrix.pair.otp-version}}
-          elixir-version: ${{matrix.pair.elixir-version}}
-      - name: Run Mix project tests
+          gleam-version: ${{matrix.pair.gleam-version}}
+      - name: Run test Gleam project tests
         run: |-
           cd test-project
-          mix deps.get
-          mix test
+          rebar3 install_deps
+          rebar3 eunit
