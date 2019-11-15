@@ -19,6 +19,8 @@ jobs:
       - run: $GITHUB_WORKSPACE/gleam-bin/gleam --version
       - name: Run Gleam compiler
         run: |
+          env
+          echo
           echo ">>> echoing path and gleam-bin"
           echo $PATH
           echo $GITHUB_WORKSPACE/gleam-bin
