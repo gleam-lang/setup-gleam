@@ -26,4 +26,10 @@ jobs:
           echo
           ls -la $GITHUB_WORKSPACE/gleam-bin
           echo
+          ls -la $GITHUB_WORKSPACE/gleam-bin
+          echo
+          pwd
+          echo
+          ./gleam --version
+          echo
           gleam --version
