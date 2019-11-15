@@ -20,9 +20,9 @@ jobs:
       - name: Run Gleam compiler
         run: |
           echo ">>> /github/workspace"
-          echo ls /github
-          echo ls /github/workspace
-          echo ls /github/workspace/gleam-bin
+          ls /github
+          ls /github/workspace
+          ls /github/workspace/gleam-bin
           echo
           echo ">>> echoing path and gleam-bin"
           echo $PATH
