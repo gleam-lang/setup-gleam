@@ -6,10 +6,6 @@ VERSION=$1
 
 $ASDF_DATA_DIR/bin/asdf install gleam $VERSION
 
-env
-
-echo
-echo
 echo $GITHUB_WORKSPACE
 ls $GITHUB_WORKSPACE
 
