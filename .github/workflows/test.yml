@@ -21,12 +21,9 @@ jobs:
         run: |
           echo
           echo $PATH
+          echo $GITHUB_WORKSPACE/gleam-bin
           echo
-          ls -la $GITHUB_WORKSPACE
-          echo
-          ls -la $GITHUB_WORKSPACE/gleam-bin
-          echo
-          ls -la $GITHUB_WORKSPACE/gleam-bin
+          cd $GITHUB_WORKSPACE/gleam-bin
           echo
           pwd
           echo
