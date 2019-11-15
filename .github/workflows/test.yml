@@ -18,4 +18,12 @@ jobs:
       - run: ls -la $GITHUB_WORKSPACE/gleam-bin
       - run: $GITHUB_WORKSPACE/gleam-bin/gleam --version
       - name: Run Gleam compiler
-        run: gleam version
+        run: |
+          echo
+          echo $PATH
+          echo
+          ls -la $GITHUB_WORKSPACE
+          echo
+          ls -la $GITHUB_WORKSPACE/gleam-bin
+          echo
+          gleam --version
