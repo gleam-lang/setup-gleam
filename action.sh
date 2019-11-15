@@ -13,5 +13,4 @@ echo
 echo $GITHUB_WORKSPACE
 ls $GITHUB_WORKSPACE
 
-cp -v $ASDF_DATA_DIR/installs/gleam/$VERSION/bin/gleam /usr/local/bin/gleam
-ls /usr/local/bin
+echo "::add-path::$ASDF_DATA_DIR/installs/gleam/$VERSION/bin/"
