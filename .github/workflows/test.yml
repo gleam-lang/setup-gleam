@@ -14,8 +14,8 @@ jobs:
         uses: ./
         with:
           gleam-version: 0.4.2
-      - run: /root/
-      - run: /root/.asdf
-      - run: /root/.asdf/installs/gleam/0.4.2/bin/
+      - run: ls /root/
+      - run: ls /root/.asdf
+      - run: ls /root/.asdf/installs/gleam/0.4.2/bin/
       - name: Test Gleam binary run
         run: gleam version
