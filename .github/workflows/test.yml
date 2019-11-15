@@ -9,13 +9,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1.0.0
-      - name: Use actions/setup-gleam
+      - name: Install Gleam compiler
         uses: ./
         with:
           gleam-version: 0.4.2
-      - run: ls /root/
-      - run: ls /root/.asdf
-      - run: ls /root/.asdf/installs/gleam/0.4.2/bin/
-      - name: Test Gleam binary run
+      - name: Run Gleam compiler
         run: gleam version
