@@ -15,7 +15,6 @@ jobs:
         with:
           gleam-version: 0.4.2
       - run: echo $PATH
-      - run: ls $PATH
       - run: echo $GITHUB_WORKSPACE
       - run: ls $GITHUB_WORKSPACE
       - run: ls $GITHUB_WORKSPACE/gleam-bin
