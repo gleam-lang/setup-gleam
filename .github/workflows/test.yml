@@ -16,6 +16,6 @@ jobs:
           gleam-version: 0.4.2
       - run: whoami
       - run: ls -la $GITHUB_WORKSPACE/gleam-bin
-      - run: $GITHUB_WORKSPACE/gleam-bin/gleam version
+      - run: $GITHUB_WORKSPACE/gleam-bin/gleam --version
       - name: Run Gleam compiler
         run: gleam version
