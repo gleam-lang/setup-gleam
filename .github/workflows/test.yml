@@ -10,11 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1.0.0
-      - run: echo $PATH
       - name: Use actions/setup-gleam
         uses: ./
         with:
           gleam-version: 0.4.2
-      - run: echo $PATH
+      - run: /root/
+      - run: /root/.asdf
+      - run: /root/.asdf/installs/gleam/0.4.2/bin/
       - name: Test Gleam binary run
         run: gleam version
