@@ -2,6 +2,8 @@
 
 set -eu
 VERSION=$1
+ASDF_DATA_DIR=/root/.asdf
 
-~/.asdf/bin/asdf install gleam $VERSION
-cp ~/.asdf/installs/gleam/$VERSION/bin/gleam /usr/local/bin/gleam
+
+$ASDF_DATA_DIR/bin/asdf install gleam $VERSION
+cp $ASDF_DATA_DIR/installs/gleam/$VERSION/bin/gleam /usr/local/bin/gleam
