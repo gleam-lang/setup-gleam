@@ -10,3 +10,12 @@ $ASDF_DATA_DIR/bin/asdf install gleam $VERSION
 mkdir -pv $GLEAM_BIN
 cp -v $ASDF_DATA_DIR/installs/gleam/$VERSION/bin/gleam $GLEAM_BIN
 echo "::add-path::$GLEAM_BIN"
+
+echo
+ls /
+
+echo
+ls /github
+
+echo
+ls /github/workspace
