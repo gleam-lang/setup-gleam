@@ -14,9 +14,7 @@ jobs:
         uses: ./
         with:
           gleam-version: 0.4.2
-      - run: echo $PATH
-      - run: echo $GITHUB_WORKSPACE
-      - run: ls $GITHUB_WORKSPACE
-      - run: ls $GITHUB_WORKSPACE/gleam-bin
+      - run: whoami
+      - run: ls -la $GITHUB_WORKSPACE/gleam-bin
       - name: Run Gleam compiler
         run: gleam version
