@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1.0.0
-      - uses: gleam-lang/setup-gleam@v1.0.0
+      - name: Use actions/setup-gleam
+        uses: ./
         with:
           gleam-version: 0.4.2
       - run: ls ~/.asdf
