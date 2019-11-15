@@ -19,11 +19,6 @@ jobs:
       - run: $GITHUB_WORKSPACE/gleam-bin/gleam --version
       - name: Run Gleam compiler
         run: |
-          echo ">>> /github/workspace"
-          ls /github
-          ls /github/workspace
-          ls /github/workspace/gleam-bin
-          echo
           echo ">>> echoing path and gleam-bin"
           echo $PATH
           echo $GITHUB_WORKSPACE/gleam-bin
