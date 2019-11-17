@@ -14,25 +14,7 @@ jobs:
         uses: ./
         with:
           gleam-version: 0.4.2
-      - run: whoami
-      - run: ls -la $GITHUB_WORKSPACE/gleam-bin
-      - run: $GITHUB_WORKSPACE/gleam-bin/gleam --version
       - name: Run Gleam compiler
         run: |
-          env
-          echo
-          echo ">>> echoing path and gleam-bin"
-          echo $PATH
-          echo $GITHUB_WORKSPACE/gleam-bin
-          echo
-          echo ">>> entering \$GITHUB_WORKSPACE/gleam-bin"
-          cd $GITHUB_WORKSPACE/gleam-bin
-          echo
-          echo ">>> printing current dir"
-          pwd
-          echo
-          echo ">>> Calling gleam in current dir"
-          ./gleam --version
-          echo
-          echo ">>> Calling gleam via path"
+          which gleam
           gleam --version
