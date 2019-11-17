@@ -7,11 +7,15 @@ export ASDF_DATA_DIR=$(mktemp -d)
 VERSION=$1
 
 # Install asdf
-git clone https://github.com/asdf-vm/asdf.git $ASDF_DATA_DIR --depth 1 --branch v0.7.5
+git \
+  -c advice.detachedHead=false \
+  clone https://github.com/asdf-vm/asdf.git $ASDF_DATA_DIR \
+  --depth 1 \
+  --branch v0.7.5
 source $ASDF_DATA_DIR/asdf.sh
 
 # Install asdf Gleam support
-asdf plugin-add gleam https://github.com/vic/asdf-gleam.git --depth 1
+asdf plugin-add gleam https://github.com/vic/asdf-gleam.git
 
 # Install Gleam
 asdf install gleam $VERSION
