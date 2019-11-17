@@ -1,0 +1,13 @@
+name: Setup Gleam
+description: Install the Gleam compiler
+author: Louis Pilfold <louis@lpil.uk>
+branding:
+  color: white
+  icon: box
+inputs:
+  gleam-version:
+    description: Version of Gleam to install
+    required: true
+runs:
+  using: node12
+  main: main.js
