@@ -1,5 +1,5 @@
 name: Setup Gleam
-description: Set up an Elixir/OTP environment and add it to the PATH
+description: Install the Gleam compiler
 author: Louis Pilfold <louis@lpil.uk>
 branding:
   color: pink
@@ -9,7 +9,5 @@ inputs:
     description: Version of Gleam to install
     required: true
 runs:
-  using: docker
-  image: Dockerfile
-  args:
-    - ${{ inputs.gleam-version }}
+  using: node12
+  main: main.js

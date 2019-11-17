@@ -25,7 +25,7 @@ jobs:
           echo $PATH
           echo $GITHUB_WORKSPACE/gleam-bin
           echo
-          echo ">>> entering $GITHUB_WORKSPACE/gleam-bin"
+          echo ">>> entering \$GITHUB_WORKSPACE/gleam-bin"
           cd $GITHUB_WORKSPACE/gleam-bin
           echo
           echo ">>> printing current dir"

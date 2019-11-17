@@ -3,10 +3,11 @@
 [![](https://github.com/gleam-lang/setup-gleam/workflows/Test/badge.svg)](https://github.com/gleam-lang/setup-gleam/actions)
 [![](https://github.com/gleam-lang/setup-gleam/workflows/Licensed/badge.svg)](https://github.com/gleam-lang/setup-gleam/actions)
 
-This actions sets up a Gleam environment for use in Actions by:
+This actions sets up a Gleam environment for use in Actions by installing the
+Gleam compiler.
 
-- Installing OTP
-- Installing Gleam
+Most likely you'll want to use this with another action to install the
+Erlang/OTP runtime.
 
 **Note** Currently, this action currently only supports Actions' `ubuntu-` runtimes.
 
