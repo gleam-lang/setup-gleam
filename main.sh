@@ -30,3 +30,5 @@ sudo cp -v $ASDF_DATA_DIR/installs/gleam/$VERSION/bin/gleam /usr/local/bin/gleam
 # Cleanup
 echo Removing sandboxed asdf
 rm -fr $ASDF_DATA_DIR
+
+echo Done!
