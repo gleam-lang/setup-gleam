@@ -21,7 +21,7 @@ asdf plugin-add gleam https://github.com/vic/asdf-gleam.git
 asdf install gleam $VERSION
 
 # Move Gleam binary onto path
-cp -v $ASDF_DATA_DIR/installs/gleam/$VERSION/bin/gleam /usr/local/bin/gleam
+sudo cp -v $ASDF_DATA_DIR/installs/gleam/$VERSION/bin/gleam /usr/local/bin/gleam
 
 # Cleanup
 rm -fr $ASDF_DATA_DIR
