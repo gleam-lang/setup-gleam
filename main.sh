@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
-set -eu
-
+set -e
 VERSION=$1
+
+export ZSH_VERSION=""
 export ASDF_DATA_DIR=$(mktemp -d)
 
 # Install asdf
-git clone https://github.com/asdf-vm/asdf.git $ASDF_DATA_DIR --depth 1
+git clone https://github.com/asdf-vm/asdf.git $ASDF_DATA_DIR --depth 1 --branch v0.7.5
 source $ASDF_DATA_DIR/asdf.sh
 
 # Install asdf Gleam support
