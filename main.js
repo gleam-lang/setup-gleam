@@ -1,4 +1,5 @@
 const { exec } = require("@actions/exec");
 const core = require("@actions/core");
 
-exec("./main.sh").catch(err => core.setFailed(err.message));
+const version = core.getInput("gleam-version", { required: true });
+exec(`./main.sh ${version}`).catch(err => core.setFailed(err.message));
