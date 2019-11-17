@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-set -e
-VERSION=$1
-
+set -eu
 export ZSH_VERSION=""
 export ASDF_DATA_DIR=$(mktemp -d)
+
+VERSION=$1
 
 # Install asdf
 git clone https://github.com/asdf-vm/asdf.git $ASDF_DATA_DIR --depth 1 --branch v0.7.5
