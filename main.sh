@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 set -eu
 export ZSH_VERSION=""
@@ -10,6 +10,7 @@ VERSION=$1
 git \
   -c advice.detachedHead=false \
   clone https://github.com/asdf-vm/asdf.git $ASDF_DATA_DIR \
+  --quiet \
   --depth 1 \
   --branch v0.7.5
 source $ASDF_DATA_DIR/asdf.sh
