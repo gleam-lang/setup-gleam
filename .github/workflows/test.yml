@@ -18,3 +18,16 @@ jobs:
         run: |
           which gleam
           gleam --version
+
+  test_compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1.0.0
+      - name: Install Gleam compiler
+        uses: ./
+        with:
+          gleam-version: ref:master
+      - name: Run Gleam compiler
+        run: |
+          which gleam
+          gleam --version
