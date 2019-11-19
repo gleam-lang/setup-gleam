@@ -22,7 +22,7 @@ jobs:
       - uses: gleam-lang/setup-erlang@v1.0.0
         with:
           otp-version: 22.1
-      - uses: gleam-lang/setup-gleam@v1.0.0
+      - uses: gleam-lang/setup-gleam@v1.0.1
         with:
           gleam-version: 0.4.1
       - run: rebar3 install_deps
@@ -47,7 +47,7 @@ jobs:
       - uses: gleam-lang/setup-erlang@v1.0.0
         with:
           otp-version: ${{matrix.otp}}
-      - uses: gleam-lang/setup-gleam@v1.0.0
+      - uses: gleam-lang/setup-gleam@v1.0.1
         with:
           gleam-version: ${{matrix.gleam}}
       - run: rebar3 install_deps
@@ -78,7 +78,7 @@ jobs:
       - uses: gleam-lang/setup-erlang@v1.0.0
         with:
           otp-version: 22.1
-      - uses: gleam-lang/setup-gleam@v1.0.0
+      - uses: gleam-lang/setup-gleam@v1.0.1
         with:
           gleam-version: 0.4.1
       - run: rebar3 install_deps

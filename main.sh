@@ -3,7 +3,6 @@
 set -eu
 export ZSH_VERSION=""
 export ASDF_DATA_DIR=$(mktemp -d)
-
 VERSION=$1
 
 # Install asdf
@@ -25,7 +24,8 @@ asdf install gleam $VERSION
 
 # Move Gleam binary onto path
 echo Installing Gleam to /usr/local/bin/gleam
-sudo cp -v $ASDF_DATA_DIR/installs/gleam/$VERSION/bin/gleam /usr/local/bin/gleam
+DIR=$(echo $VERSION | sed 's/:/-/')
+sudo cp -v $ASDF_DATA_DIR/installs/gleam/$DIR/bin/gleam /usr/local/bin/gleam
 
 # Cleanup
 echo Removing sandboxed asdf
