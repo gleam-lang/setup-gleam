@@ -13,7 +13,7 @@ jobs:
       - name: Install Gleam compiler
         uses: ./
         with:
-          gleam-version: 0.4.2
+          gleam-version: 0.6.0
       - name: Run Gleam compiler
         run: |
           which gleam
