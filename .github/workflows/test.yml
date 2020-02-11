@@ -9,11 +9,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1.0.0
+      - uses: actions/checkout@v2.0.0
       - name: Install Gleam compiler
         uses: ./
         with:
-          gleam-version: 0.4.2
+          gleam-version: 0.6.0
       - name: Run Gleam compiler
         run: |
           which gleam
@@ -22,7 +22,7 @@ jobs:
   test_compile:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1.0.0
+      - uses: actions/checkout@v2.0.0
       - name: Install Gleam compiler
         uses: ./
         with:
