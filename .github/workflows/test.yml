@@ -2,7 +2,7 @@ name: Test
 
 on:
   push:
-    branches: master
+    branches: main
   pull_request:
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
       - name: Install Gleam compiler
         uses: ./
         with:
-          gleam-version: ref:master
+          gleam-version: ref:main
       - name: Run Gleam compiler
         run: |
           which gleam
