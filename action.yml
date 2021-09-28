@@ -8,6 +8,9 @@ inputs:
   gleam-version:
     description: Version of Gleam to install
     required: true
+  gleam-cache:
+    description: URL template for the x86_64 gleam binary. Substring "VERSION" shall be substituted with gleam-version input
+    required: false
 runs:
   using: node12
   main: main.js
