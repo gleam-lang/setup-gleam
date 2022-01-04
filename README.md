@@ -2,6 +2,12 @@
 
 [![](https://github.com/gleam-lang/setup-gleam/workflows/Test/badge.svg)](https://github.com/gleam-lang/setup-gleam/actions)
 
+## This project is deprecated
+
+Check out this excellent replacement: https://github.com/erlef/setup-beam/
+
+## Description
+
 A GitHub action that installs the Gleam compiler for use in your CI workflow.
 
 Most likely you'll want to use this with another action to install the
